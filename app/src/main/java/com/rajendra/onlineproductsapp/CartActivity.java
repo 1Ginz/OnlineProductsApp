@@ -11,7 +11,7 @@ public class CartActivity extends AppCompatActivity {
 
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewList;
-    private ManagementCart
+//    private ManagementCart
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
