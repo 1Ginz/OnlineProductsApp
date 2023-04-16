@@ -1,12 +1,16 @@
 package com.rajendra.onlineproductsapp.model;
 
-public class Products {
+import java.io.Serializable;
 
-    Integer productid;
-    String productName;
-    String productQty;
-    String productPrice;
+public class Products implements Serializable {
+
+    private Integer productid;
+    private String productName;
+    private String productQty;
+    private String productPrice;
     Integer imageUrl;
+
+    private int numberinCart;
 
     public Products(Integer productid, String productName, String productQty, String productPrice, Integer imageUrl) {
 
@@ -15,6 +19,16 @@ public class Products {
         this.productQty = productQty;
         this.productPrice = productPrice;
         this.imageUrl = imageUrl;
+    }
+
+    public Products(Integer productid, String productName, String productQty, String productPrice, Integer imageUrl, int numberinCart) {
+
+        this.productid = productid;
+        this.productName = productName;
+        this.productQty = productQty;
+        this.productPrice = productPrice;
+        this.imageUrl = imageUrl;
+        this.numberinCart = numberinCart;
     }
 
     public String getProductName() {

@@ -8,7 +8,7 @@
     tools:context=".Productdetails">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -17,15 +17,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_back" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_more" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/ic_more" />-->
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -68,7 +68,7 @@
             app:layout_constraintTop_toTopOf="@+id/textView7" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/titleTxt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -77,12 +77,12 @@
             android:text="Japanese Cherry Blossom"
             android:textColor="@android:color/background_dark"
             android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@+id/textView12"
+            app:layout_constraintEnd_toStartOf="@+id/feeTxt"
             app:layout_constraintStart_toStartOf="@+id/textView7"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/feeTxt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
@@ -90,12 +90,12 @@
             android:text="$ 15.00"
             android:textColor="#42995C"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView11"
+            app:layout_constraintBottom_toBottomOf="@+id/titleTxt"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView11" />
+            app:layout_constraintTop_toTopOf="@+id/titleTxt" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/descriptionTxt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -103,21 +103,21 @@
             android:lineSpacingExtra="2dp"
             android:text="A moisturizing body with a sweet and refreshing aroma of Japanese cherry blossom, peony, musk, and strawberry. Will make the skin feel moist and smooth. The combination also makes long-lasting fragrance."
             android:textColor="@android:color/background_dark"
-            app:layout_constraintEnd_toEndOf="@+id/textView12"
-            app:layout_constraintStart_toStartOf="@+id/textView11"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintEnd_toEndOf="@+id/feeTxt"
+            app:layout_constraintStart_toStartOf="@+id/titleTxt"
+            app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/minusBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView13"
-            app:layout_constraintTop_toTopOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="@+id/descriptionTxt"
+            app:layout_constraintTop_toTopOf="@+id/addToCartBtn"
             app:srcCompat="@drawable/ic_minus" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/numberOderTxt"
             android:layout_width="50dp"
             android:layout_height="53dp"
             android:fontFamily="@font/rubik_medium"
@@ -125,22 +125,22 @@
             android:text="1"
             android:textColor="@android:color/background_dark"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-            app:layout_constraintStart_toEndOf="@+id/imageView8"
-            app:layout_constraintTop_toTopOf="@+id/imageView8"
+            app:layout_constraintBottom_toBottomOf="@+id/minusBtn"
+            app:layout_constraintStart_toEndOf="@+id/minusBtn"
+            app:layout_constraintTop_toTopOf="@+id/minusBtn"
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/plusBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/textView14"
-            app:layout_constraintStart_toEndOf="@+id/textView14"
-            app:layout_constraintTop_toTopOf="@+id/textView14"
+            app:layout_constraintBottom_toBottomOf="@+id/numberOderTxt"
+            app:layout_constraintStart_toEndOf="@+id/numberOderTxt"
+            app:layout_constraintTop_toTopOf="@+id/numberOderTxt"
             app:srcCompat="@drawable/ic_plus" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/addToCartBtn"
             android:layout_width="180dp"
             android:layout_height="80dp"
             android:background="@drawable/detail_page_cart_button_bg"
@@ -156,7 +156,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageProduct"
         android:layout_width="256dp"
         android:layout_height="447dp"
         android:layout_marginTop="16dp"
