@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:layout_marginBottom="16dp"
+            android:text="Chi tiết đơn hàng"
+            android:textAlignment="center"
+            android:textColor="#222222"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Đơn hàng: "
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ASDASDA"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView28"
+                    app:layout_constraintStart_toEndOf="@+id/textView28" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Đã giao"
+                    android:textColor="#42995C"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView28" />
+
+                <TextView
+                    android:id=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Đang giao"
+                    android:textColor="#D8AB25"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView28" />
+
+                <TextView
+                    android:id=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Đã giao"
+                    android:textColor="#CF0826"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView28" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Mã vận chuyển: "
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView28"
+                    app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="IW3475453455"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView31"
+                    app:layout_constraintStart_toEndOf="@+id/textView31"
+                    app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+                <EditText
+                    android:id="@+id/editTextDate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:inputType="date"
+                    android:text="10-4-2023"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView32"
+                    app:layout_constraintEnd_toEndOf="@+id/textView30"
+                    app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="2"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView31"
+                    app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Mục"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView33"
+                    app:layout_constraintStart_toEndOf="@+id/textView33" />
+
+                <LinearLayout
+                    android:id="@+id/cacdonhang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/textView34">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/aaa"
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp"
+                        tools:listitem="@layout/viewholder_historyoder_item" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Thông tin đơn hàng"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView28"
+                    app:layout_constraintTop_toBottomOf="@+id/cacdonhang" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Địa chỉ nhận hàng:"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView28"
+                    app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="47 Phạm Văn Đồng, Bắc Từ Liêm, Hà Nội"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/editTextDate2"
+                    app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Phương thức thanh toán:"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView36"
+                    app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:text="Thanh toán khi nhận hàng"
+                    app:layout_constraintEnd_toEndOf="@+id/textView37"
+                    app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Phí vận chuyển:"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView38"
+                    app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="₫30.000"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView39"
+                    app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tổng:"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView40"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₫330.000"
+                    android:textStyle="bold"
+                    android:textColor="#222"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView41"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
