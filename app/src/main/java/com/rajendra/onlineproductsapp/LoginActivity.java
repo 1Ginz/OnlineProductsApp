@@ -3,6 +3,7 @@ package com.rajendra.onlineproductsapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,10 +28,23 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (email.getText().toString().equals("user@gmail.com") && password.getText().toString().equals("1234")) {
                     Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(LoginActivity.this, UserActivity.class));
                 } else {
                     Toast.makeText(LoginActivity.this, "Tài khoản hoặc mật khẩu không đúng", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+        openRegisterPage();
     }
+
+    private void openRegisterPage(){
+        findViewById(R.id.signupText).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            }
+        });
+    }
+
 }

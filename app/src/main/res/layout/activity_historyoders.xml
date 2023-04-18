@@ -41,7 +41,7 @@
             <TextView
                 android:gravity="center"
                 android:background="@drawable/ic_cat_bg"
-                android:id=""
+                android:id="@+id/adasdadas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="18dp"
@@ -57,7 +57,7 @@
             <TextView
                 android:gravity="center"
                 android:background="@drawable/ic_cat_bg"
-                android:id=""
+                android:id="@+id/adasssdad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="18dp"
@@ -73,7 +73,7 @@
             <TextView
                 android:gravity="center"
                 android:background="@drawable/ic_cat_bg"
-                android:id=""
+                android:id="@+id/adasdadasss"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="18dp"

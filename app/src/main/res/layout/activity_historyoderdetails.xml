@@ -80,7 +80,7 @@
                     app:layout_constraintTop_toTopOf="@+id/textView28" />
 
                 <TextView
-                    android:id=""
+                    android:id="@+id/adasdadaszz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
@@ -93,7 +93,7 @@
                     app:layout_constraintTop_toTopOf="@+id/textView28" />
 
                 <TextView
-                    android:id=""
+                    android:id="@+id/adasdaddasdasd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"

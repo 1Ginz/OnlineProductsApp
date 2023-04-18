@@ -11,6 +11,11 @@
         android:exported="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Productdetails"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".CartActivity"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".UserActivity"></activity>
+        <activity android:name=".ChangePassActivity"></activity>
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

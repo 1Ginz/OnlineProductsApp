@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.rajendra.onlineproductsapp.adapter.ProductAdapter;
 import com.rajendra.onlineproductsapp.adapter.ProductCategoryAdapter;
@@ -15,6 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    Context context;
 
     ProductCategoryAdapter productCategoryAdapter;
     RecyclerView productCatRecycler, prodItemRecycler;
@@ -46,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
         setProdItemRecycler(productsList);
 
+        openLoginPage();
+        openCartPage();
+
     }
 
     private void setProductRecycler(List<ProductCategory> productCategoryList){
@@ -57,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
         productCatRecycler.setAdapter(productCategoryAdapter);
 
     }
+
+
 
     private void setProdItemRecycler(List<Products> productsList){
 
@@ -95,6 +105,22 @@ public class MainActivity extends AppCompatActivity {
     // and dont forget to comments
     // see you in the next video
 
+    private void openLoginPage(){
+        findViewById(R.id.imageView3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, UserActivity.class));
+            }
+        });
+    }
 
+    private void openCartPage(){
+        findViewById(R.id.buttoncart).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, CartActivity.class));
+            }
+        });
+    }
 
 }

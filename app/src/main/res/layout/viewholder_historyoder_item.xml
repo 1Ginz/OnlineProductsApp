@@ -13,7 +13,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/cart_img"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="4dp"
@@ -28,7 +28,7 @@
         app:srcCompat="@drawable/prod" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/cart_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -37,8 +37,8 @@
         android:textColor="#222222"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toTopOf="@+id/imageView10" />
+        app:layout_constraintStart_toEndOf="@+id/cart_img"
+        app:layout_constraintTop_toTopOf="@+id/cart_img" />
 
     <TextView
         android:id="@+id/textView13"
@@ -47,8 +47,8 @@
         android:layout_height="wrap_content"
         android:textSize="14sp"
         android:text="Số lượng: "
-        app:layout_constraintStart_toStartOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintStart_toStartOf="@+id/cart_name"
+        app:layout_constraintTop_toBottomOf="@+id/cart_name" />
 
     <TextView
         android:id="@+id/textView44"
