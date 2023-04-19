@@ -42,7 +42,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ProductViewHol
         System.out.println("ZOOOZOZOZOOZ: " + productsList.size());
         holder.prodImage.setImageResource(productsList.get(position).getImageUrl());
         holder.prodName.setText(productsList.get(position).getProductName());
-        holder.prodQty.setText(productsList.get(position).getProductQty());
+        holder.priceOfMultipleProduct.setText(productsList.get(position).getProductPrice());
         holder.prodPrice.setText(productsList.get(position).getProductPrice());
         holder.productIDTextView.setText(productsList.get(position).getProductid().toString());
 
@@ -72,7 +72,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ProductViewHol
     public static final class ProductViewHolder extends RecyclerView.ViewHolder {
 
         ImageView prodImage;
-        TextView prodName, prodQty, prodPrice;
+        TextView prodName, priceOfMultipleProduct, prodPrice;
         ImageView plusBtn, minusBtn;
         TextView numberOfProductTextView;
         TextView productIDTextView;
@@ -84,12 +84,14 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ProductViewHol
             prodImage = itemView.findViewById(R.id.cart_img);
             prodName = itemView.findViewById(R.id.cart_name);
             prodPrice = itemView.findViewById(R.id.productPrice);
-            prodQty = itemView.findViewById(R.id.priceOfMultipleProduct);
+            priceOfMultipleProduct = itemView.findViewById(R.id.priceOfMultipleProduct);
             plusBtn = itemView.findViewById(R.id.plusBtnInCart);
             minusBtn = itemView.findViewById(R.id.minusBtnInCart);
             numberOfProductTextView = itemView.findViewById(R.id.numberOfProduct);
             plusBtn.setOnClickListener((e) -> {
                 numberOfProductTextView.setText(String.valueOf(Integer.valueOf((String) numberOfProductTextView.getText()) + 1));
+                int value = Integer.valueOf((String) numberOfProductTextView.getText());
+                priceOfMultipleProduct.setText((String.valueOf(value*(int)Double.parseDouble(prodPrice.getText().toString()))+".000"));
             });
 
             minusBtn.setOnClickListener((e) -> {
@@ -105,6 +107,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ProductViewHol
                     }
                 } else {
                     numberOfProductTextView.setText(String.valueOf(value));
+                    priceOfMultipleProduct.setText((String.valueOf(value*(int)Double.parseDouble(prodPrice.getText().toString()))+".000"));
                 }
             });
         }
