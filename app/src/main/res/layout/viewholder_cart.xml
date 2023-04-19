@@ -11,7 +11,19 @@
     android:background="@drawable/cart_items_background"
     >
 
-
+    <TextView
+        android:id="@+id/productIDTextView"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="1"
+        android:textColor="#222222"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/minusBtnInCart"
+        app:layout_constraintStart_toEndOf="@+id/minusBtnInCart" />
     <ImageView
         android:id="@+id/cart_img"
         android:layout_width="100dp"

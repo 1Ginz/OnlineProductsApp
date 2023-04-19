@@ -2,6 +2,7 @@ package com.rajendra.onlineproductsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,6 +28,7 @@ public class Productdetails extends AppCompatActivity {
 
         initView();
 //        getBundle();
+
     }
 
     private void getBundle(){
@@ -72,6 +74,20 @@ public class Productdetails extends AppCompatActivity {
         minusBtn = findViewById(R.id.minusBtn);
         imageProduct = findViewById(R.id.imageProduct);
         backBtn = findViewById(R.id.backBtn);
+
+        plusBtn.setOnClickListener((e) -> {
+            numberOderTxt.setText(String.valueOf(Integer.valueOf((String) numberOderTxt.getText()) + 1));
+        });
+
+        minusBtn.setOnClickListener((e) -> {
+            numberOderTxt.setText(String.valueOf(Math.max(1, Integer.valueOf((String) numberOderTxt.getText()) - 1)));
+        });
+
+        addToCartBtn.setOnClickListener((e) -> {
+            Intent i = new Intent(this.getApplicationContext(), CartActivity.class);
+            i.putExtra("DATA", object);
+            startActivity(i);
+        });
     }
 
 }

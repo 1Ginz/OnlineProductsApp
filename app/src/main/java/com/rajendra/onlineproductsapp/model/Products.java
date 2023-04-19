@@ -7,10 +7,10 @@ public class Products implements Serializable {
     private Integer productid;
     private String productName;
     private String productQty;
+
     private String productPrice;
     Integer imageUrl;
 
-    private int numberinCart;
 
     public Products(Integer productid, String productName, String productQty, String productPrice, Integer imageUrl) {
 
@@ -28,7 +28,6 @@ public class Products implements Serializable {
         this.productQty = productQty;
         this.productPrice = productPrice;
         this.imageUrl = imageUrl;
-        this.numberinCart = numberinCart;
     }
 
     public String getProductName() {
