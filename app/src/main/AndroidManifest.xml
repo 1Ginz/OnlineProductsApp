@@ -16,6 +16,9 @@
         <activity android:name=".RegisterActivity"></activity>
         <activity android:name=".UserActivity"></activity>
         <activity android:name=".ChangePassActivity"></activity>
+        <activity android:name=".PayActivity"></activity>
+        <activity android:name=".AddressActivity"></activity>
+        <activity android:name=".AddAddressActivity"></activity>
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

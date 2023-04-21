@@ -1,6 +1,9 @@
 package com.rajendra.onlineproductsapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,6 +23,8 @@ public class CartActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewList;
 
+    TextView continuetopayment;
+
 
     ProductCategoryAdapter productCategoryAdapter;
     RecyclerView productCatRecycler, prodItemRecycler;
@@ -32,9 +37,13 @@ public class CartActivity extends AppCompatActivity {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_cart);
 
+        continuetopayment = findViewById(R.id.continuetopayment);
+        openPayActivity();
 
         List<Products> productsList = new ProductRepository().getListProductInCart(null);
         setProdItemRecycler(productsList);
+
+
 
     }
 
@@ -48,6 +57,15 @@ public class CartActivity extends AppCompatActivity {
         cartAdapter = new CartAdapter(this, productsList);
         prodItemRecycler.setAdapter(cartAdapter);
 
+    }
+
+    private void openPayActivity(){
+        continuetopayment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CartActivity.this, PayActivity.class));
+            }
+        });
     }
 
 }
